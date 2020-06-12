@@ -1,0 +1,51 @@
+﻿<Window x:Class="VoiceMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VoiceMaker"
+        mc:Ignorable="d"
+        Title="Nile Voice Maker v1" 
+        MinHeight="183" 
+        MinWidth="400"
+        Closed="Window_Closed"
+        Icon="voice.png">
+    <Window.Resources>
+        <local:NegationConverter x:Key="negCon"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Width="120">
+            <ProgressBar Height="10" Margin="1,1,1,1" Minimum="0" Maximum="1" Value="{Binding GenerationProgress}" ToolTip="Progress of file generation"/>
+            <ComboBox Margin="1,1,1,1" SelectedIndex="{Binding SelectedVoiceIndex}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=SelectedValue.Name}" ItemsSource="{Binding AvailableVoices}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock ToolTip="{Binding Name}" Text="{Binding Name, Mode=OneTime}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Name="genBtn" Click="Button_Click" Margin="1,1,1,1">Generate file</Button>
+            <Button ToolTip="Double click to cancel speech" Click="Button_Click_3" PreviewMouseDoubleClick="Button_MouseDoubleClick" Margin="1,1,1,1" IsEnabled="{Binding CanSpeak}">Speak the text</Button>
+            <Button Click="Button_Click_4" Margin="1,1,1,1" IsEnabled="{Binding CanSpeak}">Detect available voices</Button>
+            <Button ToolTip="{Binding SaveLocation}" Margin="1,1,1,1" Click="Button_Click_1">Open saves folder</Button>
+            <Button ToolTip="{Binding SaveLocation}" Margin="1,1,1,1" Click="Button_Click_2">Set saves folder</Button>
+        </StackPanel>
+        <TextBox 
+            Margin="1,1,1,1"
+            ToolTip="Enter the text to generate here"
+            Grid.Row="0"
+            Grid.Column="1"
+            x:Name="textBox" 
+            SpellCheck.IsEnabled="True"
+            SpellCheck.SpellingReform="PreAndPostreform"
+            AcceptsReturn="True"
+            IsReadOnly="{Binding Path=CanSpeak, Converter={StaticResource negCon}, Mode=OneWay}">
+        </TextBox>
+    </Grid>
+</Window>

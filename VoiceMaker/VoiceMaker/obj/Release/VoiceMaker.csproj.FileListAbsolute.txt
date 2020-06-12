@@ -1,0 +1,15 @@
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\bin\Release\VoiceMaker.exe.config
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\bin\Release\VoiceMaker.exe
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\bin\Release\VoiceMaker.pdb
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\MainWindow.g.cs
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\App.g.cs
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker_MarkupCompile.cache
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker_MarkupCompile.lref
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\MainWindow.baml
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.g.resources
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.Properties.Resources.resources
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.csproj.GenerateResource.cache
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.csproj.CoreCompileInputs.cache
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.exe
+C:\Users\bobub\source\repos\VoiceMaker\VoiceMaker\obj\Release\VoiceMaker.pdb
